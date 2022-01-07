@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <list>
 #include "player.hpp"
+#include "enemy.hpp"
 #include "bullet.hpp"
 
 
@@ -10,6 +11,7 @@ int main() {
     
     RenderWindow window((VideoMode(800, 600)), "Shooter take 2");
     Player player;
+    Enemy enemy(Vector2f(300, 300));
     Clock deltaClock;
     std::list<Bullet> bulletList;
 
@@ -65,6 +67,7 @@ int main() {
             it->draw(window);
         }
         player.draw(window);
+        enemy.draw(window);
         window.display();
     }
     
