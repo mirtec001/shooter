@@ -9,7 +9,7 @@ using namespace sf;
 class Player {
 
 public:
-    Player();
+    Player(sf::Vector2f position);
     ~Player();
     void move(Vector2f moveSpeed);
     void update(Time dt);

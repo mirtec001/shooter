@@ -1,8 +1,8 @@
 #include "player.hpp"
 
 
-Player::Player() {
-    position = Vector2f(20, 20);
+Player::Player(Vector2f position) {
+    this->position = position;
     size = Vector2f(32, 32);
     playerRect.setSize(size);
     playerRect.setPosition(position);
